@@ -3,16 +3,16 @@ nake is make for storing project scripts in nakefile, and running them in easy
 and shell-compatible way
 
 Problems with make from the point of view of person who wants to run shell scripts:
-- need to repeat every command on top of file with .PHONY
-- tab is required before every command, without it make won't work and error message
-  will be cryptic
 - every instruction is run in separate shell, which doesn't allow to set env 
   variables in one line and use in next
-- by default doesn't use any shell extension (needs to be specifically instructed
-  using `SHELL := /bin/bash`)
 - syntax used by variables is different from shell, often impossible to use the same 
   command as in shell, adaptation is sometimes difficult and time consuming
 - single targets can't have individual parameters
+- need to repeat every command on top of file with .PHONY
+- tab is required before every command, without it make won't work and error message
+  will be cryptic 
+- by default doesn't use any shell extension (needs to be specifically instructed
+  using `SHELL := /bin/bash`)
 - focused on resolving dependencies in C/C++ and other compilled languages
 - a lot of historic baggage, built originally in 70's and 80's which is visible
 
